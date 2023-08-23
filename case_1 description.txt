@@ -1,0 +1,24 @@
+**Problem:** You have a folder containing images, and you want to achieve the following tasks:
+
+1. Rename each image to have a consistent format like "image_1", "image_2", and so on.
+2. Create a CSV report that includes the new names of each image.
+3. Include the image size in a human-readable format with appropriate units (e.g., KB, MB) in the CSV report.
+4. Include the last modification date of each image in a short date format (YYYY-MM-DD) in the CSV report.
+
+**Solution:** To solve this problem, you can use a Python script with the following steps:
+
+1. Import necessary libraries for file operations, date handling, and CSV manipulation.
+2. Define two functions:
+   - `get_short_date(timestamp)`: Converts a Unix timestamp to a short date format (YYYY-MM-DD).
+   - `get_size_with_unit(size)`: Converts a file size in bytes to a human-readable format with appropriate units (e.g., KB, MB).
+3. Specify the paths for the input folder, output folder, and CSV file name. Create the output folder if it doesn't exist.
+4. Initialize variables to count images and store image data for the CSV report.
+5. Loop through files in the input folder, filtering for common image file extensions.
+6. Copy each image to the output folder with a new name (e.g., "image_1.jpg").
+7. Retrieve the size of the image in bytes and the modification date as a timestamp.
+8. Convert the timestamp to a short date format and the image size to a human-readable format with appropriate units.
+9. Append the image data (new filename, size with units, and short date) to a list for the CSV report.
+10. Write the image data to a CSV report file with appropriate headers.
+11. Print a summary of the process, indicating the number of images processed and the location of the CSV report.
+
+This Python script efficiently organizes your images, renames them, and creates a CSV report with the new names, image sizes with units, and modification dates in a more human-readable format.
